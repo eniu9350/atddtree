@@ -25,13 +25,15 @@ atddtree* atddtree_create(atddtree_key* kmin, atddtree_key* kmax)
 min: last level min
 max: last level max
 id: 
-*/
+
 void atddtree_getrange(int level, int id, atddtree_key* min, atddtree_key* max, atddtree_key* rmin, atddtree_key* rmax)
 {
 	atddtree_key totalrange = KEYMINUS(max, min);
 	*rmin = (id-1)*totalrange/2+1;
 	*rmax = id*totalrange/2;
 }
+*/
+
 
 
 int atddtree_find(atddtree* t, atddtree_key* k, atddtree_node** n, int* d)	{
